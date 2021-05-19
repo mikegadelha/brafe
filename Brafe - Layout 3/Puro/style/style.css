@@ -1,0 +1,315 @@
+body {
+    background-color: #e7e4d8;
+}
+
+/* HEADER */
+
+.header {
+    background-color: #d6d3c8;
+    padding: 30px;
+}
+
+.header img {
+    float: left;
+}
+
+.header a img {
+    padding: 10px;
+    margin: -10px;
+}
+
+.header nav ul {
+    float: right;
+}
+
+.header nav ul li {
+    display: inline-block;
+}
+
+.header nav ul li a {
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 1.125em;
+}
+
+.header nav ul li:hover {
+    transform: scale(1.1);
+}
+
+.header nav ul li:last-child a {
+    margin-right: -10px;
+}
+
+.header::after, .header::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* CONTAINER */
+
+.main-container {
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex; /*Aula 4-6 Brafé 3 01:00*/
+}
+
+/* .main-container::after, .main-container::before {
+    content: '';
+    display: table;
+    clear: both;
+} // posso remover o clearfix pois meu container se tornou flex */
+
+/* MENU NAV */
+
+.menu-nav {
+    width: 300px;
+    background-color: #252525;
+    /* float: left; // posso remover o float pois meu container se tornou flex */
+}
+
+.menu-nav ul li a {
+    display: block;
+    color: #fff;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    padding: 20px;
+    border-bottom: 3px solid #484846;
+}
+
+.menu-nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-nav ul li a::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    background-image: url('../img/icones.png'); /*Aula 4-3 Brafé 3*/
+}
+
+.nav-cont::before { /*Aula 4-3 Brafé 3*/
+    background-position: 0 0;
+}
+
+.nav-prod::before {
+    background-position: 0 -24px;
+}
+
+.nav-pag::before {
+    background-position: 0 calc(-24px * 2); /*é possível fazer desta forma também caso eu não queira fazer conta*/
+}
+
+.nav-plug::before {
+    background-position: 0 calc(-72px * 3);
+}
+
+.nav-form::before {
+    background-position: 0 -96px;
+}
+
+.nav-hosp::before {
+    background-position: 0 -120px;;
+}
+
+/* PRODUTOS */
+
+.produtos {
+    /* float: left; // posso remover o float pois meu container se tornou flex */ 
+    width: calc(100% - 300px);
+    max-width: 960px;
+    padding: 20px;
+}
+
+.produtos-header h1 {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin-top: 5px;
+    float: left;
+}
+
+.produtos-header a {
+    background-color: #c17139;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.125em;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    border-radius: 5px;
+    float: right;
+}
+
+.produtos-header a:hover {
+    background-color: #252525;
+}
+
+.produtos-header::after, .produtos-header::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.produtos-item {
+    background-color: #fff;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,.35); /*Aula 4-5 Brafé 3*/
+    margin-top: 20px;
+    position: relative; /*é necessário usar position relative aqui pois o anchor abaixo vai se posicionar em relação a esse container // Aula 4-5 Brafé 3 02:00*/
+}
+
+.produtos-item::after, .produtos-item::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.produtos-item img {
+    float: left;
+}
+
+.produtos-item ul {
+    float: left;
+    padding: 0 20px;
+    width: calc(100% - 140px); 
+}
+
+.produtos-item ul li {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.125em;
+    padding: 11.8px 0;
+    border-bottom: 1px solid #e7e4d8;
+}
+
+.produtos-item ul li:last-child {
+    border-bottom: none;
+}
+
+.produtos-item ul li span {
+    display: inline-block;
+    width: 111.550px; /*cria uma margem de 20px entre o final de 'descrição' e 'café'*/
+    font-weight: bold;
+}
+
+.produtos-item a {
+    width: 24px;
+    height: 24px;
+    background-image: url('/img/edit.svg');
+    background-repeat: no-repeat;
+    text-indent: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.produtos-item a:hover {
+    background-image: url('/img/edit-hover.svg');
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #d6d3c8;
+    padding: 30px 0;
+    font-size: 1.125em;
+    line-height: 1.4em;
+    text-align: center;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 960px) {
+    .main-container {
+        display: block;
+    }
+
+    .menu-nav {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu-nav ul li {
+        display: inline-block;
+    }
+    
+    .menu-nav ul li a {
+        padding: 10px;
+        border-bottom: none;
+    }
+    
+    .menu-nav ul li a::before {
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    .produtos {
+        width: 100%;
+    }
+}
+
+@media (max-width: 660px) {
+    .header a img {
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+
+    .header nav ul {
+        float: none;
+        text-align: center;
+    }
+    
+    .menu-nav ul {
+        padding-top: 3.5px; /*pra compensar o padding/margem misterioso que surgiu*/
+        /* background: blueviolet; */
+    }
+
+    .menu-nav ul li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px; /*resolvi diferente do professor // Aula 4-7 Brafé 3 03:00*/
+        overflow: hidden;
+        /* background: tomato; // Q: de onde diabos está vindo uma margem/padding entre os itens do menu e no bottom? R: https://stackoverflow.com/questions/31626392/css-overflowhidden-creating-margin-at-bottom */
+    }
+
+    .produtos-header h1 {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .produtos-header a {
+        float: none;
+        display: block;
+        width: 256px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .produtos-item img {
+        float: right;
+    }
+
+    .produtos-item ul {
+        float: none;
+        width: calc(100% - 140px);
+        padding: 0 15px;
+    }
+
+    .produtos-item ul li span {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .produtos-item ul li:last-child {
+        width: 326px;
+    }
+
+    .produtos-item a {
+        right: 155px;
+    }
+}
