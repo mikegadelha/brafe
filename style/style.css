@@ -108,3 +108,10 @@ img {
 .footer a {
     margin-right: auto;
 }
+
+@media (max-width: 520px) {
+    .footer {
+        display: block;
+        text-align: center;
+    }
+}

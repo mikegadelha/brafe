@@ -1,0 +1,479 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #252525;
+    box-sizing: border-box;
+}
+
+/* Menu */
+
+.menu {
+    background-color: #252525;
+    padding: 15px 0;
+}
+
+.menu_nav ul {
+    list-style: none;
+    float: right;
+    display: flex; /**/
+}
+
+.menu_nav ul li {
+    display: flex;
+}
+
+.menu_nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.125em;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-top: 2px solid #252525;
+    border-bottom: 2px solid #252525;
+}
+
+.sobre_page:hover, .produtos_page:hover, .portfolio_page:hover, .contato_page:hover {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    opacity: 50%;
+}
+
+@media (max-width: 767.9px) {
+
+    .menu_nav {
+        text-align: center;
+    }
+
+    .menu_logo img {
+        margin: 0 auto 15px auto;
+    }
+
+    .menu_nav ul {
+        float: none;
+        display: inline-block;
+    }
+
+    .menu_nav ul li {
+        display: inline-block;
+    }
+
+    .menu_nav ul li:first-child a {
+        margin-left: 0px;
+    }
+
+}
+
+@media (max-width: 410px) {
+
+    .menu_nav ul li a {
+        margin-left: 5px;
+    }
+
+}
+
+/* Intro */
+
+.intro {
+    background: url(../img/bg-intro.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.intro h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.intro h1::after {
+    content: '';
+    display: block;
+    width: 62.5px;
+    height: 4px;
+    background-color: #fff;
+    margin: 10px auto;
+}
+
+.intro p {
+    color: #fff;
+    font-size: 1.125em;
+    font-style: italic;
+}
+
+@media (max-width: 767.9px) {
+
+    .intro {
+        padding: 60px 0;
+    }
+
+}
+
+@media (max-width: 575.9px) {
+
+    .intro h1 {
+        font-size: 2.25em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+}
+
+/* Sobre */
+
+.sobre {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.sobre_item img {
+    width: 100%;
+}
+
+.sobre h2 {
+    font-size: 2.25em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.sobre_item h3 {
+    font-size: 2.25em;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #252525;
+    width: 220px;
+    padding: 5px 0 10px 0;
+    position: relative;
+    top: -25px;
+}
+
+.sobre > p {
+    font-size: 1.125em;
+    font-style: italic;
+    line-height: 1.4em;
+    text-align: center;
+    max-width: 50%;
+    margin: 15px auto 0 auto;
+}
+
+@media (max-width: 991.9px) {
+
+    .sobre > p {
+        max-width: 75%;
+    }
+
+}
+
+@media (max-width: 767.9px) {
+
+    .sobre > p {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+}
+
+@media (max-width: 575.9px) {
+
+    .sobre {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .sobre h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+}
+
+/* Produtos */
+
+.produtos {
+    background-color: #e7e4d8;
+    border-top: 3px solid #d6d3c8;
+    border-bottom: 3px solid #d6d3c8;
+    padding-top: 60px;
+    padding-bottom: 60px; /*quando se usa uma classe 'normal' e uma classe do bootstrap (ex. class="normal bootstrap") o ideal é não usar atalhos (como padding: 60px 0;) e sim diretamente para evitar conflitos entre as classes 'normais' e as do bootstrap*/
+}
+
+.produtos_item h2 {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.produtos_item h2::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: currentColor;
+    border-radius: 50%;
+    border: 5px solid #e7e4d8;
+    box-shadow: 0 0 0 10px currentColor;
+    margin: 0 auto 30px auto;
+}
+
+.produtos_paulista::before {
+    color: #492901;
+}
+
+.produtos_carioca::before {
+    color: #c17139;
+}
+
+.produtos_mineiro::before {
+    color: #d7a54d;
+}
+
+.produtos_item p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+    margin-bottom: 30px;
+}
+
+.produtos_btn {
+    border: 5px solid;
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #252525;
+    display: block;
+    width: 190px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.produtos_btn:hover {
+    font-size: 1.3125em; 
+    color: #252525; /*remove a cor dada pelo bootstrap*/
+    text-decoration: none; /*remove o estilo dado pelo bootstrap*/
+}
+
+@media (max-width: 767.9px) {
+
+    .produtos_item p {
+        text-align: center;
+    }
+
+    .produtos_item:nth-child(1) p, .produtos_item:nth-child(2) p {
+        margin-bottom: 60px;
+    }
+
+}
+
+/* Unidades */
+
+.unidades.container div.row {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.unidades .col-sm img {
+    width: 100%;
+}
+
+.unidades_descricao h2 {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.unidades_descricao p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+    margin-bottom: 30px;
+}
+
+.unidades_btn {
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #252525;
+    border: 3px solid;
+    padding: 10px 25px;
+}
+
+.unidades_btn:hover {
+    font-size: 1.3125em;
+    color: #252525; /*remove a cor dada pelo bootstrap*/
+    text-decoration: none; /*remove o estilo dado pelo bootstrap*/
+}
+
+@media (max-width: 767.9px) {
+
+    .unidades {
+        text-align: center;
+    }
+
+    .unidades h2 {
+        margin-top: 15px;
+    }
+
+}
+
+/* Newsletter */
+
+.newsletter {
+    background-color: #e7e4d8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.news_info h2 {
+    font-size: 2.25em;
+    font-weight: bold;
+}
+
+.news_info p {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.news_form label {
+    display: none;
+}
+
+.news_form {
+    display: flex; /**/
+    flex-wrap: wrap; /**/
+    align-content: flex-start; /**/
+    align-self: center; /**/
+}
+
+.news_form input {
+    border: 3px solid;
+    background: none;
+    font-size: 1.5em;
+    font-style: italic;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.form_btn {
+    background-color: #252525;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.form_btn:hover {
+    font-weight: bold;
+}
+
+@media (max-width: 1199.9px) {
+    
+    .news_info h2 {
+        font-size: 2em;
+    }
+
+}
+
+@media (max-width: 991.9px) {
+    
+    .newsletter .container .row {
+        display: block;
+    }
+
+    .news_info h2, .news_info p {
+        text-align: center;
+    }
+
+    .news_info p {
+        margin-bottom: 7.5px;
+    }
+
+    form.news_form.col-sm {
+        justify-content: center; /**/
+    }
+
+}
+
+@media (max-width: 449.9px) {
+
+    .news_info h2 {
+        font-size: 1.75em;
+    }
+
+    .news_info p {
+        font-size: 1.5em;
+    }
+
+    .news_form input, .form_btn {
+        width: 100%;
+    }
+
+}
+
+/* Footer */
+
+.footer {
+    background-color: #d6d3c8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer p {
+    font-size: 0.875em;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.footer img {
+    float: right;
+}
+
+@media (max-width: 575.9px) {
+    
+    .footer_text {
+        flex: 2; /**/
+    }
+
+    .footer_img {
+        flex: 1; /**/
+    }
+
+}
+
+@media (max-width: 449.9px) {
+
+    .footer .container .row {
+        display: block;
+    }
+
+    .footer .container .row::after, .footer .container .row::before {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .footer p {
+        text-align: center;
+        position: relative;
+        top: 35px;
+    }
+
+    .footer img {
+        float: none;
+        position: relative;
+        top: -30px;
+        margin: 0 auto;
+    }
+
+}

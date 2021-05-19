@@ -1,0 +1,20 @@
+body, header, div, a, img, nav, ul, li, main, section, h1, span, footer, p {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #252525;
+    font-size: 1em;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7e4d8;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
