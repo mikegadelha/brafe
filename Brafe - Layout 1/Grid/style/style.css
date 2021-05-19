@@ -1,0 +1,382 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #252525;
+    box-sizing: border-box; /*não está presente no meu layout puro*/
+}
+
+/* Menu */
+
+.menu {
+    background-color: #252525;
+    padding: 20px 0;
+}
+
+.menu_nav ul {
+    float: right;
+}
+
+.menu_nav ul li {
+    display: inline-block;
+    padding: 10px 0;
+    margin-left: 30px;
+}
+
+.menu_nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.125em;
+    padding: 10px;
+}
+
+.sobre_page:hover, .produtos_page:hover, .portfolio_page:hover, .contato_page:hover {
+    border-top: 2px solid;
+    border-bottom: 2px solid #fff;
+    opacity: 75%;
+}
+
+/* Smartphone */
+
+@media (max-width: 739px) {
+
+    .menu {
+        padding: 30px 0;
+    }
+
+    .menu_logo img {
+        margin: 0 auto 30px auto;
+    }
+
+    .menu_nav ul {
+        float: none;
+        clear: both;
+    }
+
+    .menu_nav ul li {
+        padding: 0px;
+        margin-left: 0px;
+    }
+
+    .menu_nav ul li a {
+        padding: 5px;
+    }
+    
+}
+
+/* Intro */
+
+.intro {
+    background: url(../img/bg-intro.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    text-align: center; /*está centralizando todo contéudo de texto dentro da intro*/
+}
+
+.intro h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.intro h1::after {
+    content: '';
+    display: block;
+    width: 62.5px;
+    height: 4px;
+    background-color: #fff;
+    margin: 15px auto;
+}
+
+.intro p {
+    color: #fff;
+    font-size: 1.125em;
+    font-style: italic;
+}
+
+/* Sobre */
+
+.sobre {
+    padding: 60px 0;
+}
+
+.sobre h2 {
+    font-size: 2.25em;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sobre_item h3 {
+    font-size: 2.25em;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #252525;
+    width: 220px;
+    padding: 5px 0 10px 0;
+    top: -25px;
+    position: relative;
+}
+
+.sobre > p { /*aqui estou falando diretamente com todos os 'p's que estão dentro de 'section.sobre' (mesmo que no caso só tenha um)*/
+    font-size: 1.125em;
+    font-style: italic;
+    line-height: 1.4em;
+    max-width: 480px;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    padding: 0 10px;
+}
+
+/* Produtos */
+
+.produtos {
+    background-color: #e7e4d8;
+    padding: 60px 0;
+    border-top: 3px solid #d6d3c8;
+    border-bottom: 3px solid #d6d3c8;
+    text-align: center;
+}
+
+.produtos_item h2 {
+    font-size: 2.25em;
+    margin-bottom: 15px;
+}
+
+.produtos_item h2::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: currentColor;
+    border-radius: 50%;
+    border: 5px solid #e7e4d8;
+    box-shadow: 0 0 0 10px currentColor;
+    margin: 0 auto 30px auto;
+}
+
+.produtos_paulista::before {
+    color: #492901;
+}
+
+.produtos_carioca::before {
+    color: #c17139;
+}
+
+.produtos_mineiro::before {
+    color: #d7a54d;
+}
+
+.produtos_item p {
+    font-size: 0.875em;
+    line-height: 1.4em;
+    margin-bottom: 30px;
+}
+
+.produtos_btn { /*aqui eu fiz diferente (Aula 2-15)*/
+    border: 5px solid;
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.produtos_btn:hover {
+    font-size: 1.3125em;
+}
+
+/* Unidades */
+
+.unidades .container {
+    margin: 60px auto;
+}
+
+.unidades_descricao h2 {
+    font-size: 2.25em;
+    margin-bottom: 15px;
+}
+
+.unidades_descricao p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+    margin-bottom: 45px;
+}
+
+.unidades_descricao a {
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 3px solid;
+    padding: 10px 20px;
+}
+
+.unidades_descricao a:hover {
+    font-size: 1.3125em;
+}
+
+/* Smartphone */
+
+@media (max-width: 739px) {
+    
+    .unidades_descricao {
+        text-align: center;
+    }
+
+    .unidades_descricao h2 {
+        margin: 15px 0;
+    }
+
+    .unidades_descricao p {
+        margin-bottom: 30px;
+    }
+
+}
+
+/* Newsletter */
+
+.newsletter {
+    background-color: #e7e4d8;
+    padding: 30px 0;
+}
+
+.news_info h2 {
+    font-size: 2.25em;
+}
+
+.news_info p {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.news_form {
+    margin: 10px 10px;
+}
+
+.news_form label {
+    display: none;
+}
+
+.news_form input { /*aqui eu fiz diferente (Aula 2-16)*/
+    width: 70%;
+    border: 3px solid;
+    background: none;
+    font-size: 1.5em;
+    font-style: italic;
+    outline: none;
+    padding: 10px;
+    float: left;
+}
+
+.form_btn { /*aqui eu fiz diferente (Aula 2-16)*/
+    background-color: #252525;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border: none;
+    width: 30%;
+    padding: 13px 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.form_btn:hover {
+    font-weight: bold;
+}
+
+/* Tablet */
+
+@media (max-width: 960px) and (min-width: 739px) { /*defini aqui um breakpoint pois a responsividade gerada pelo grid em % não estava me agradando*/
+    
+    .news_info.grid-6 {
+        width: 460px;
+        float: none;
+        clear: both;
+        margin: 0 auto;
+    }
+
+    .news_form.grid-6 {
+        width: 460px;
+        float: none;
+        clear: both;
+        margin: 10px auto 0 auto; 
+    }
+
+}
+
+/* Smartphone */
+
+@media (max-width: 739px) {
+    
+    .news_info.grid-6 {
+        width: 300px;
+        float: none;
+        clear: both;
+        margin: 0 auto;
+    }
+
+    .news_info h2 {
+        font-size: 1.5em;
+        width: 303px; /*defini um width que supera meu container pois a frase estava estourando o mesmo*/
+        position: relative;
+        right: 1.5px; /*o 1.5px (3px a mais do width/2) é para centralizar a imagem no meio da página*/
+    }
+
+    .news_info p {
+        font-size: 1.3125em;
+    }
+
+    .news_form.grid-6 {
+        width: 300px;
+        margin: 10px auto 0 auto;
+    }
+
+    .news_form input {
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+
+    .form_btn {
+        font-size: 1em;
+        width: 100%;
+    }
+
+}
+
+/* Footer */
+
+.footer {
+    background-color: #d6d3c8;
+    padding: 10px 0;
+}
+
+.footer p {
+    font-size: 0.875em;
+    font-style: italic;
+    margin: 10px;
+}
+
+.footer img {
+    float: right;
+    margin: 0 10px;
+}
+
+/* Smartphone */
+
+@media (max-width: 739px) {
+    
+    .footer p {
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+
+    .footer img {
+        display: none;
+    }
+
+}

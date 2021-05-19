@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Brafé - Layout 1 - Bootstrap</title>
+</head>
+<body>
+    <header class="menu">
+        <div class="container"> <!--bootstrap-->
+            <div class="row"> <!--bootstrap-->
+                <a href="#" class="menu_logo col-md-4"><img src="img/brafe.png" alt="Brafé Logo"></a> <!--bootstrap-->
+                <nav class="menu_nav col-md-8"> <!--bootstrap-->
+                    <ul>
+                        <li><a href="#" class="sobre_page">sobre</a></li>
+                        <li><a href="#" class="produtos_page">produtos</a></li>
+                        <li><a href="#" class="portfolio_page">portfólio</a></li>
+                        <li><a href="#" class="contato_page">contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="intro">
+        <h1>Cafés com a cara<br>do Brasil</h1>
+        <p>Direto das fazendas de Minas Gerais</p>
+    </main>
+
+    <section class="sobre container"> <!--bootstrap-->
+        <h2>Uma Mistura de</h2>
+        <div class="row"> <!--bootstrap-->
+            <div class="sobre_item col-sm"> <!--bootstrap-->
+                <img src="img/cafe-1.jpg" alt="Café">
+                <h3>amor</h3>
+            </div>
+            <div class="sobre_item col-sm"> <!--bootstrap-->
+                <img src="img/cafe-2.jpg" alt="Café">
+                <h3>perfeição</h3>
+            </div>
+        </div>
+        <p>O café é uma bebida produzida a partir dos grãos torrados do fruto do cafeeiro. É servido tradicionalmente quente, mas também pode ser consumido gelado. Ele é um estimulante, por possuir cafeína - geralmente 80 a 140mg para cada 207ml dependendo do método de preparação.</p>
+    </section>
+
+    <section class="produtos">
+        <div class="container"> <!--bootstrap-->
+            <div class="row"> <!--bootstrap-->
+                <div class="produtos_item col-md"> <!--bootstrap--> <!--mudei pro md pois o responsivo com o sm fica muito pequeno e tudo muito apertado-->
+                    <h2 class="produtos_paulista">Paulista</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+                <div class="produtos_item col-md"> <!--bootstrap--> <!--mudei pro md pois o responsivo com o sm fica muito pequeno e tudo muito apertado-->
+                    <h2 class="produtos_carioca">Carioca</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+
+                <div class="produtos_item col-md"> <!--bootstrap--> <!--mudei pro md pois o responsivo com o sm fica muito pequeno e tudo muito apertado-->
+                    <h2 class="produtos_mineiro">Mineiro</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+            <a href="#" class="produtos_btn">Saiba mais</a>
+        </div> <!--bootstrap-->
+    </section>
+
+    <section class="unidades container"> <!--bootstrap-->
+        <div class="row"> <!--bootstrap-->
+            <div class="col-sm"> <!--bootstrap-->
+                <img src="img/botafogo.jpg" alt="Brafé Botafogo">
+            </div>
+            <div class="unidades_descricao col-md"> <!--bootstrap--> <!--mudei pro md pois o responsivo com o sm fica muito pequeno e tudo muito apertado-->
+                <h2>Botafogo</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <a href="#" class="unidades_btn">Ver Mapa</a>
+            </div>
+        </div>
+        <div class="row"> <!--bootstrap-->
+            <div class="col-sm"> <!--bootstrap-->
+                <img src="img/iguatemi.jpg" alt="Brafé Iguatemi">
+            </div>
+            <div class="unidades_descricao col-md"> <!--bootstrap--> <!--mudei pro md pois o responsivo com o sm fica muito pequeno e tudo muito apertado-->
+                <h2>Iguatemi</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <a href="#" class="unidades_btn">Ver Mapa</a>
+            </div>
+        </div>
+        <div class="row"> <!--bootstrap-->
+            <div class="col-sm"> <!--bootstrap-->
+                <img src="img/mineirao.jpg" alt="Brafé Mineirão">
+            </div>
+            <div class="unidades_descricao col-md"> <!--bootstrap--> <!--mudei pro md pois o responsivo com o sm fica muito pequeno e tudo muito apertado-->
+                <h2>Mineirão</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <a href="#" class="unidades_btn">Ver Mapa</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container"> <!--bootstrap-->
+            <div class="row"> <!--bootstrap-->
+                <div class="news_info col-sm"> <!--bootstrap-->
+                    <h2>Assine Nossa Newsletter</h2>
+                    <p>promoções e eventos mensais</p>
+                </div>
+                <form class="news_form col-sm"> <!--bootstrap-->
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="digite seu e-mail">
+                    <button type="submit" class="form_btn">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container"> <!--bootstrap-->
+            <div class="row"> <!--bootstrap-->
+                <div class="footer_text col-sm"> <!--bootstrap-->
+                    <p>Desenvolvido por @mikegadelha</p>
+                </div>
+                <div class="footer_img col-sm"> <!--bootstrap-->
+                    <img src="img/brafe.png" alt="Brafé Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
