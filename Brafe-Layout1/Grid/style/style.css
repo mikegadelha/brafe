@@ -42,6 +42,10 @@
         padding: 30px 0;
     }
 
+    .menu .container {
+        max-width: 100%; /*fixa o responsivo no chrome mobile*/
+    }
+
     .menu_logo img {
         margin: 0 auto 30px auto;
     }
@@ -49,6 +53,7 @@
     .menu_nav ul {
         float: none;
         clear: both;
+        text-align: center; /*fixa o responsivo no chrome mobile*/
     }
 
     .menu_nav ul li {

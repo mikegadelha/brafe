@@ -455,6 +455,10 @@ ul.menu_nav { /*sempre que no container há um elemento flutuante, os outros ele
         max-width: 300px;
     }
 
+    .menu_container {
+        max-width: 100%; /*fixa o responsivo no chrome mobile*/
+    }
+
     .intro h1 {
         font-size: 2.25em;
     }
